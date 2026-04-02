@@ -30,7 +30,7 @@ public class ButtonManager : MonoBehaviour
         switch (button.name)
         {
             case "SinglePlayerStart":
-                SceneManager.LoadScene("SampleScene");
+                SceneManager.LoadScene("GameScene");
                 break;
             case "MultiplayerStart":
                 SceneManager.LoadScene("MPScene");
@@ -47,7 +47,7 @@ public class ButtonManager : MonoBehaviour
                 else if (SceneManager.GetSceneByName("GameOverScene").isLoaded)
                 {
                     SceneManager.UnloadSceneAsync("GameOverScene");
-                    SceneManager.LoadScene("SampleScene");
+                    SceneManager.LoadScene("GameScene");
                 }
 
                 Time.timeScale = 1;
